@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-container img {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 150px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Logo from Google Drive -->
+        <img src="https://drive.google.com/uc?id=105saU4jKOMqeZ4vUCq7-6SnnH3MANANH" alt="Golden Dragon Logo">
+        <h1>Game Selection Form</h1>
+        <form id="gameForm" action="YOUR_GOOGLE_SCRIPT_URL" method="POST">
+            <label>Gender:</label>
+            <div>
+                <label>
+                    <input type="radio" name="gender" value="Male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+            </div>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="gameSelection">Game Selection:</label>
+            <select id="gameSelection" name="gameSelection" required>
+                <option value="" disabled selected>Select a game</option>
+                <option value="Golden Dragon">Golden Dragon</option>
+                <option value="SinCity">SinCity</option>
+                <option value="Fire Phoenix">Fire Phoenix</option>
+                <option value="Fortune King">Fortune King</option>
+                <option value="Orion Stars">Orion Stars</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
